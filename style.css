@@ -1,0 +1,702 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' ,'sans-serif' ;
+}
+
+body{
+  color: white;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --primary_color2: #7fc8f8;
+  --primary_color: #5aa9e6;
+  --backcolor: rgb(12, 11, 11);
+}
+
+/* ------------------------------header section ----------------------------------- */
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 20px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+span{
+  color: var(--primary_color);
+}
+
+.name{
+  font-size: 30px;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.responsivelist{
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  display: none;
+  padding: 20px;
+  gap: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: var(--primary_color);
+  z-index: 1;
+}
+
+.homee{
+  color: var(--primary_color);
+}
+
+.responsivelist li a{
+  color: black;
+}
+
+.main{
+  height: 100vh;
+  padding-top: 225px;
+  padding-left: 150px;
+  position: relative;
+}
+
+.list{
+  display: flex;
+  gap: 30px;
+}
+li{
+  list-style-type: none;
+}
+
+.mid{
+  background-color: var(--primary_color);
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -42%);
+  filter: blur(300px);
+}
+
+.container{
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container_name{
+  font-size: 75px;
+  text-align: center;
+}
+
+#ham{
+  display: none;
+}
+
+.container_intro{
+  text-align: center;
+  font-size: 30px;
+}
+
+.container_about{
+  text-align: center;
+  font-size: 40px;
+}
+
+/* --------------------------------------about section ----------------------------------- */
+
+#about{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 130px;
+  
+  /* padding-left: 10%; */
+  /* padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 50px; */
+}
+
+.abt{
+  font-size: 60px;
+  color: var(--primary_color);
+}
+
+.photo{
+  width: 40%;
+}
+
+.myphoto{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.aboutcontent{
+  width: 60%;
+}
+
+.content{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.aboutme{
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  width: fit-content;
+  font-weight: bold;
+  
+}
+
+.skills {
+  color: var(--primary_color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.education{
+  cursor: pointer;
+}
+
+.myskills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.clang, .cpluslang, .pythonlang, .html, .css, .javascript, .vscode, .sublime{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--primary_color);
+  border-radius: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.clang img, .cpluslang img, .pythonlang img, .html img, .css img, .javascript img, .vscode img, .sublime img{
+  height: 80px;
+}
+
+.myeducation{
+  width: fit-content;
+  margin-top: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.myeducation i{
+  color: var(--primary_color);
+}
+
+/* --------------------------------------------services section----------------------------------- */
+
+.services{
+  display: flex;
+  margin: 60px;
+  gap: 40px;
+}
+
+#services{
+  padding: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-bottom: 60px; */
+}
+
+#services h1{
+  font-size: 65px;
+  width: fit-content;
+  color: var(--primary_color);
+}
+
+.webdesign, .webdev, .tutor{
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(86, 84, 84);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.webdesign:hover, .webdev:hover, .tutor:hover{
+  background-color: var(--primary_color);
+  transform: scale(1.1);
+}
+
+.webdesign p, .webdev p, .tutor p{
+  font-size: 26px;
+  text-align: center;
+}
+
+#dev, #design, #tutor{
+  font-size: 40px;
+}
+
+/* -------------------------------------portfolio section --------------------------------- */
+
+.myportfolio,.restaurant{
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 225px;
+  transition: 0.5s ease-in-out;
+  box-shadow: 1px 1px 20px var(--primary_color);
+  border: 2px solid var(--primary_color);
+  border-radius: 20px;
+}
+
+.portfoliodata,.restaurantdata{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 100%;
+  /* transform: translateY(100%); */
+  transition:  all ease 0.3s;
+  padding: 30px;
+  font-size: 15px;
+  text-align: center;
+  /* text-align: justify;/ */
+}
+
+
+.myportfolio img, .restaurant img{
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px;
+}
+
+.portfolioname{
+  color: var(--primary_color);
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.worksection{
+  display: flex;
+  gap: 30px;
+  margin: 80px;
+}
+
+#git1, #git2{
+  padding: 10px;
+  font-size: 25px;
+}
+
+/* ------------------------------------------contact section --------------------------------- */
+
+#contact{
+  padding: 131px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.contactme{
+  width: fit-content;
+}
+
+.contactme h1{
+  font-size: 60px;
+  width: fit-content;
+  padding: 20px;
+  /* color: var(--primary_color); */
+}
+
+#user, #location, #email{
+  width: fit-content;
+  font-size: 17px;
+  color: var(--primary_color);
+}
+.contactme div{
+  width: fit-content;
+  font-size: 17px;
+}
+
+.contactname, .contactlocation, .contactemail{
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.social{
+  margin: 20px;
+}
+.social a{
+  margin: 10px;
+  font-size: 25px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input {
+  width: 500px;
+  border-radius: 5px;
+  outline: none;
+  height: 45px;
+  background-color: rgb(45, 42, 42);;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+form textarea{
+  outline: none;
+  background-color: rgb(45, 42, 42);;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+button{
+  width:  fit-content;
+  border-radius: 10px;
+  border: 1px solid var(--primary_color);
+  box-shadow: 0px 0px 10px var(--primary_color);
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--primary_color);
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: transparent;
+  color: var(--primary_color);
+}
+
+#msg{
+  color: #61b752;
+  margin-top: -10px;
+  font-size: 20px;
+  display: block;
+}
+
+.footer{
+  padding: 25px;
+  background-color: var(--primary_color);
+}
+
+.footer div{
+  text-align: center;
+  font-size: 20px;
+  /* text-size-adjust: 20px; */
+}
+
+/* ------------------------------------------css for small screen------------------------------------ */
+
+@media(max-width: 835px){
+  .list{
+    display: none;
+  }
+  #ham{
+    display: block;
+    cursor: pointer;
+  }
+  .nav{
+    padding: 20px;
+  }
+  .main{
+    padding: 0px;
+  }
+  .container{
+    width: 100%;;
+  }
+  .worksection{
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 0px;
+  }
+  #services, #portfolio, #contact{
+    padding-bottom: 30px;
+    padding-top: 110px;
+  }
+  #contact{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+    /* padding: 10px; */
+  }
+  .contactme h1{
+    color: var(--primary_color);
+  }
+   form input{
+    width: 100%;
+  }
+  button{
+    padding: 10px;
+    font-size: 15px;
+    margin: auto;;
+  }
+
+  .photo{
+    width: 50%;
+  }
+  .aboutcontent{
+    padding: 0px;
+  }
+  .content{
+    width: 100%;
+  }
+  .contactme h1{
+    font-size: 60px
+  }
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1138px) {
+  .container_name{
+    font-size: 55px;
+  }
+  .container_about{
+    font-size: 30px;
+  }
+  .container_intro{
+    font-size: 25px;
+  }
+  #contact{
+    gap: 30px;
+  }
+
+  #about{
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  .photo{
+    margin-top: 80px;
+  }
+  .abt{
+    text-align: center;
+  }
+  .aboutcontent{
+    width: 80%;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 1000px){
+  #services, #portfolio, #about{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .services{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  form input{
+    width: 400px;
+  }
+  .contactme h1{
+    font-size: 40px
+  }
+}
+
+@media (max-width: 1200px){
+  .contactme h1{
+    font-size: 50px
+  }
+}
+
+@media (max-width: 510px) {
+  .portfolioname{
+    font-size: 40px;
+  }
+  #services h1, .contactme h1{
+    font-size: 50px;
+    text-align: center;
+  }
+  form{
+    width: 100%;
+  }
+  /* #about{
+    padding: 0px;
+  } */
+  #services, #portfolio{
+    padding:auto 50px 50px 50px;
+  }
+  
+}
+
+
+@media (max-width: 560px) {
+  .mid{
+    width:100%;
+    height: 60%;
+  }
+  .mid{
+    filter: blur(200px);
+  }
+  .footer div{ 
+    font-size: 15px;
+  }
+  .container p{
+    font-size: 14px;
+  }
+   .container h1{
+    font-size: 40px;
+  } 
+  .container h3{
+    font-size: 17px;
+  }
+  #about{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .aboutcontent{
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px){
+  .myportfolio, .restaurant{
+    width: 300px;
+    height: auto;
+    font-size: 10px;
+    padding: 0px;
+  }
+  .portfoliodata, .restaurantdata{
+    padding: 10px;
+  }
+  .portfoliodata div, .restaurantdata div{
+    font-size: 13px;
+    padding: 0px;
+    width: 100%;
+  }
+  #git1, #git2{
+    font-size: 10px;
+  }
+  
+  form input{
+    width: 290px;
+  }
+  .abt{
+    font-size: 40px;
+  }
+  
+  
+}
+
+@media (max-width: 360px){
+  .contactname div, .contactlocation div, .contactemail div{
+    font-size: 13px;
+  }
+  .aboutcontent{
+    width: 100%;
+  }
+  #about, #services, #portfolio{
+    padding: auto 0px 0px 0px;
+  }
+
+  .myportfolio, .restaurant{
+    width: 250px;
+    height: auto;
+  }
+  .portfoliodata, .restaurantdata{
+    padding: 6px;
+  }
+  .portfoliodata div, .restaurantdata div{
+    font-size: 11px;
+  }
+  #git1, #git2{
+    font-size: 10px;
+  }
+  
+  .contactme h1{
+    font-size: 40px;
+  }
+
+  .services{
+    width: 100%;
+    padding: 0px;
+  }
+  .webdesign, .webdev, .tutor{
+    width: 100%;
+  }
+  
+
+  #about{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  form input{
+    width: 270px;
+  }
+}
+
+
+@media (max-width: 400px){
+  .photo{
+    width: 100%;;
+    display: flex;
+    justify-content: center;
+  }
+  .myphoto{
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 305px){
+  .container h1{
+    font-size: 30px;
+  }
+}

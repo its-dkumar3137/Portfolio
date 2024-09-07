@@ -51,25 +51,55 @@ a{
   color: white;
 }
 
-.responsivelist{
-  position: absolute;
-  right: 20px;
-  top: 100px;
-  display: none;
-  padding: 20px;
+.reslist{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding-left: 130px;
   gap: 20px;
-  flex-direction: column;
+  padding-right: 130px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  /* background-color: var(--primary_color); */
+  font-size: 20px;
+  width: fit-content;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
   border-radius: 10px;
-  background-color: var(--primary_color);
   z-index: 1;
+  display: none;
+  backdrop-filter: blur(90px);
+  border: 3px solid var(--primary_color);
+  box-shadow: 1px 1px 20px var(--primary_color);
+  
+  /* z-index: 1; */
 }
+.responsivelist{
+  /* position: absolute; */
+  /* right: 0px; */
+  /* top: 100%;
+  left: 1px; */
+  /* display: none;  */
+  /* gap: 40px; */
+  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  
+} 
 
 .homee{
   color: var(--primary_color);
 }
 
 .responsivelist li a{
-  color: black;
+  color: white
 }
 
 .main{
@@ -268,7 +298,7 @@ li{
 
 /* -------------------------------------portfolio section --------------------------------- */
 
-.myportfolio,.restaurant{
+.myportfolio,.restaurant, .movie{
   position: relative;
   overflow: hidden;
   width: 400px;
@@ -279,22 +309,20 @@ li{
   border-radius: 20px;
 }
 
-.portfoliodata,.restaurantdata{
+.portfoliodata,.restaurantdata, .moviedata{
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 100%;
-  /* transform: translateY(100%); */
   transition:  all ease 0.3s;
   padding: 30px;
   font-size: 15px;
   text-align: center;
-  /* text-align: justify;/ */
 }
 
 
-.myportfolio img, .restaurant img{
+.myportfolio img, .restaurant img, .movie img{
   width: 100%;
   height: 100%;
   transition: 0.5s ease-in-out;
@@ -304,7 +332,10 @@ li{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding: 125px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .portfolioname{
@@ -315,13 +346,22 @@ li{
 
 .worksection{
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   margin: 80px;
 }
 
-#git1, #git2{
+.change{
   padding: 10px;
   font-size: 25px;
+}
+
+.change:hover{
+  color: #5aa9e6;
+  transition: 0.2s ease-in-out;
 }
 
 /* ------------------------------------------contact section --------------------------------- */
@@ -462,6 +502,7 @@ button:hover{
     gap: 40px;
     margin-bottom: 0px;
   }
+
   #services, #portfolio, #contact{
     padding-bottom: 30px;
     padding-top: 110px;
@@ -499,6 +540,9 @@ button:hover{
   .footer {
     margin-top: 50px;
   }
+  .reslist{
+    display: none;
+  }
 }
 
 @media (max-width: 1138px) {
@@ -530,6 +574,9 @@ button:hover{
     width: 80%;
     padding: 10px;
   }
+  .reslist{
+    display: none;
+  }
 
 }
 
@@ -548,11 +595,17 @@ button:hover{
   .contactme h1{
     font-size: 40px
   }
+  .reslist{
+    display: none;
+  }
 }
 
 @media (max-width: 1200px){
   .contactme h1{
     font-size: 50px
+  }
+  .reslist{
+    display: none;
   }
 }
 

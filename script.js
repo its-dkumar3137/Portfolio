@@ -1,19 +1,20 @@
 const ham = document.querySelector("#ham");
 const list = document.querySelector(".responsivelist");
+const reslist = document.querySelector('.reslist');
 
 ham.addEventListener("click", ()=>{
-  if(list.style.display === "flex"){
-    list.style.display = "none";
+  if(reslist.style.display === "flex"){
+    reslist.style.display = "none";
   }
   else{
-    list.style.display = "flex";
+    reslist.style.display = "flex";
   }
 });
 
 const tabs = document.querySelectorAll(".responsivelist li a");
 for(let i=0; i<tabs.length; i++){
   tabs[i].addEventListener('click' , ()=> {
-    list.style.display= "none";
+    reslist.style.display= "none";
   });
 }
 
@@ -132,4 +133,20 @@ resturant.addEventListener('mouseleave', () => {
   restaurantdata.style.top = "100%";
   restimg.style.filter = "blur(0px)";
   restimg.style.transform  ="scale(1)";
+});
+
+const movie = document.querySelector('.movie');
+const moviedata = document.querySelector('.moviedata');
+const movieimg = document.querySelector('.portimgg');
+
+movie.addEventListener('mouseover', () =>{
+  moviedata.style.top = "0";
+  movieimg.style.filter = "blur(5px) brightness(0.7)";
+  movieimg.style.transform  ="scale(1.1)";
+});
+
+movie.addEventListener('mouseleave', () => {
+  moviedata.style.top = "100%";
+  movieimg.style.filter = "blur(0px)";
+  movieimg.style.transform  ="scale(1)";
 });
